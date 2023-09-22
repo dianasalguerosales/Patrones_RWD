@@ -38,4 +38,17 @@ h1 {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+
+/** GRID DOS COLUMNAS **/
+
+@media (min-width: 768px) {
+    .dos_columnas {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        /* otras formas de asignar tamaños a un grid column
+        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr; */
+        column-gap: 2rem;
+    }
+}
