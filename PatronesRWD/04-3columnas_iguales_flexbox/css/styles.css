@@ -38,4 +38,16 @@ h1 {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+
+/** FLEXBOX 3 COLUMNAS **/
+
+@media (min-width: 768px) {
+    .tres-columnas {
+        display: flex;
+        /*gap: 2rem; sin mucho soporte en safari*/
+        justify-content: space-between;
+    }
+    .entrada-blog {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
