@@ -47,4 +47,25 @@ p {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+
+/** TRES COLUMNAS DE DIFERENTE TAMAÑO CON FLEXBOX **/
+
+.flex {
+    text-align: justify;
+}
+
+@media (min-width: 768px) {
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .contenido-principal {
+        flex-basis: calc(46% - 1.5rem);
+    }
+    .sidebar {
+        flex-basis: calc(27% - 1.5rem);
+    }
+    .sidebar-1 {
+        order: -1;
+    }
+}
