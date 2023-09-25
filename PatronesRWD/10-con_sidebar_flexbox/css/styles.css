@@ -35,6 +35,7 @@ p {
     max-width: 1200px;
     width: 95%;
     margin: 0 auto;
+    text-align: justify;
 }
 
 .entrada-blog a {
@@ -48,4 +49,20 @@ p {
 }
 
 
-/** CODIGO AQUI **/
+/** SIDEBAR CON FLEXBOX **/
+
+@media (min-width: 768px) {
+    .contenedor-sidebar {
+        display: flex;
+        /* space-between necesario cuando se usa calc */
+        /* justify-content: space-between; */
+    }
+    aside {
+        /* flex usado para decir que por cada pixel del aside el articule recibe 3*/
+        flex: 1;
+    }
+    article {
+        flex: 3;
+        padding-right: 2rem;
+    }
+}
