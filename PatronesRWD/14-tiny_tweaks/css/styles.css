@@ -20,8 +20,10 @@ img {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 1.5rem;
+    text-align: center;
 }
+
 
 /** CODIGO AQUI **/
 
@@ -31,6 +33,7 @@ h2 {
 
 p {
     font-size: 2rem;
+    text-align: justify;
 }
 
 .contenedor {
@@ -49,4 +52,24 @@ p {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+
+/** TINY TWEAKS **/
+
+
+/*pequeños ajustes*/
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+    img {
+        max-width: 85%;
+    }
+    .entrada-blog img {
+        display: block;
+        /* Cambia el comportamiento predeterminado de la imagen */
+        margin: 0 auto;
+        /* Centra la imagen horizontalmente */
+    }
+}
