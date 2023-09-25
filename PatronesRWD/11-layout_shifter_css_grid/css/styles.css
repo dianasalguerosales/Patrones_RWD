@@ -35,6 +35,7 @@ p {
     max-width: 1200px;
     width: 95%;
     margin: 0 auto;
+    text-align: justify;
 }
 
 .entrada-blog a {
@@ -48,4 +49,36 @@ p {
 }
 
 
-/** CODIGO AQUI **/
+/** LAYOUT SHIFTER CON GRID **/
+
+@media (min-width: 768px) {
+    .layout-shifter {
+        display: grid;
+        grid-template-areas: "contenido" "inferior";
+    }
+    .sidebar {
+        grid-area: inferior;
+    }
+    .contenido-principal {
+        grid-area: contenido;
+        display: grid;
+        grid-template-areas: "entrada-1 entrada-2";
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .layout-shifter {
+        grid-template-areas: "contenido sidebar";
+        column-gap: 2rem;
+    }
+    .sidebar {
+        grid-area: sidebar;
+    }
+    .contenido-principal {
+        grid-area: contenido;
+        grid-template-areas: "entrada_1" "entrada_2";
+        grid-template-columns: unset;
+    }
+}
