@@ -35,6 +35,7 @@ p {
     max-width: 1200px;
     width: 95%;
     margin: 0 auto;
+    text-align: justify;
 }
 
 .entrada-blog a {
@@ -47,4 +48,18 @@ p {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+
+/** SIDEBAR CON GRID **/
+
+@media (min-width: 768px) {
+    .contenedor-sidebar {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 4rem;
+        /*instruccion para decirle a css que lo acomode automaticamente pero en columnas */
+        grid-auto-flow: column;
+    }
+    aside {
+        grid-column: 2 / 3;
+    }
+}
