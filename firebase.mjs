@@ -18,7 +18,16 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-if (isSupported()) {
-    const analytics = getAnalytics(app);
-    // Resto del código que utiliza analytics
+
+// Check if analytics is supported before trying to use it
+if (typeof navigator !== 'undefined' && navigator.userAgent) {
+    const isSupported = /Chrome|Safari/.test(navigator.userAgent);
+    if (isSupported) {
+        const analytics = getAnalytics(app);
+        // Rest of the code that uses analytics
+    } else {
+        console.error('Firebase Analytics is not supported in this browser.');
+    }
+} else {
+    console.error('Unable to determine browser support for Firebase Analytics.');
 }
