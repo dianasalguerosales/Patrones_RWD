@@ -18,4 +18,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+if (isSupported()) {
+    const analytics = getAnalytics(app);
+    // Resto del código que utiliza analytics
+}
